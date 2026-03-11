@@ -12,7 +12,7 @@ public class HelloApp {
             String name = args[0];
             
             // Display personalized greeting
-            System.out.println("Hello " + name);
+            System.out.println("Hello, " + name);
         } else {
             // No argument provided, display default
             System.out.println("Hello World");
