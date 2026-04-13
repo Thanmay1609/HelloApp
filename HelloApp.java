@@ -1,17 +1,27 @@
 /**
- * HelloApp - UC5 - Display Hello with Multiple Command-Line Arguments using Enhanced For Loop or Default Message
+ * HelloApp - UC6 - Display Hello with Multiple Command-Line Arguments using substring to Remove Trailing Delimiter
  * @author Thanmay
- * @version 5.0
+ * @version 6.0
  */
 public class HelloApp {
     public static void main(String[] args) {
         
         // Check if user provided any names as command-line arguments
         if (args.length > 0) {
-            // Use enhanced for loop to iterate through all arguments
+            // Build greeting string with delimiter
+            String greeting = "Hello, ";
+            
+            // Use enhanced for loop to concatenate all names with delimiter
             for (String name : args) {
-                System.out.println("Hello " + name);
+                greeting = greeting + name + ", ";
             }
+            
+            // Remove trailing delimiter using substring
+            // substring(0, length-2) removes last 2 characters (comma and space)
+            greeting = greeting.substring(0, greeting.length() - 2);
+            
+            // Display the final greeting
+            System.out.println(greeting);
         } else {
             // No arguments provided, display default greeting
             System.out.println("Hello, World!");
